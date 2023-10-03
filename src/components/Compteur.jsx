@@ -3,17 +3,19 @@ import Valeur from './Valeur';
 
 export default class Compteur extends Component {
     state = {
-        compteur: 0
+        compteur: 0,
+        pasI:1,
+        pasD:1
     }
 
     incrementer = (e) => {
         e.preventDefault();
-        this.setState({ compteur: this.state.compteur + 1 })
+        this.setState({ compteur: this.state.compteur + this.state.pasI })
     }
 
     decrementer = (e) => {
         e.preventDefault();
-        this.setState({ compteur: this.state.compteur - 1 })
+        this.setState({ compteur: this.state.compteur - this.state.pasD })
     }
 
     initialiser = (e) => {
@@ -33,18 +35,18 @@ export default class Compteur extends Component {
 
                 <fieldset>
                     <legend>Pas d'incrémentation</legend>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
+                    <button onClick={() => {this.setState({pasI: 1})}}>1</button>
+                    <button onClick={() => {this.setState({pasI: 2})}}>2</button>
+                    <button onClick={() => {this.setState({pasI: 3})}}>3</button>
+                    <button onClick={() => {this.setState({pasI: 4})}}>4</button>
                 </fieldset>
 
                 <fieldset>
                     <legend>Pas de décrémentation</legend>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
+                    <button onClick={() => {this.setState({pasD: 1})}}>1</button>
+                    <button onClick={() => {this.setState({pasD: 2})}}>2</button>
+                    <button onClick={() => {this.setState({pasD: 3})}}>3</button>
+                    <button onClick={() => {this.setState({pasD: 4})}}>4</button>
                 </fieldset>
             </div>
         )
