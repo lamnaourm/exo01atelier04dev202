@@ -25,9 +25,11 @@ export default class Compteur extends Component {
         return (
             <div>
                 <Valeur valeur={this.state.compteur} />
-                <button onClick={this.incrementer}>Incrémenter</button>
-                <button onClick={this.decrementer}>Decrémenter</button>
-                <button onClick={this.initialiser}>Initialiser</button>
+                <div className='btn'>
+                    <button onClick={this.incrementer}>Incrémenter</button>
+                    <button onClick={this.decrementer}>Decrémenter</button>
+                    <button onClick={this.initialiser}>Initialiser</button>
+                </div>
             </div>
         )
     }
