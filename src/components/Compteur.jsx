@@ -30,6 +30,22 @@ export default class Compteur extends Component {
                     <button onClick={this.decrementer}>Decrémenter</button>
                     <button onClick={this.initialiser}>Initialiser</button>
                 </div>
+
+                <fieldset>
+                    <legend>Pas d'incrémentation</legend>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pas de décrémentation</legend>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                </fieldset>
             </div>
         )
     }

@@ -26,10 +26,27 @@
     color: white;
 }
 
-.btn button:hover {
+button:hover {
     opacity: 0.75;
 }
 
+
+fieldset {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+fieldset button {
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+}
 
 
 
